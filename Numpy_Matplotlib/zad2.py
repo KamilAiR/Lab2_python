@@ -1,6 +1,6 @@
 #----------------------------------------------------Rozdział 4 -------------------------------------------------
-'''
 import numpy as np
+'''
 
 arr = np.array([1, 2, 3, 4, 5]) #tablice
 print(arr)
@@ -216,3 +216,4 @@ print( A.flatten("F") )
 # plt.title('Wykres ')
 # plt.grid(True)
 # plt.show()
+
