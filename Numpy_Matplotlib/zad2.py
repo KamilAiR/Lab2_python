@@ -1,3 +1,5 @@
+#----------------------------------------------------Rozdział 4 -------------------------------------------------
+'''
 import numpy as np
 
 arr = np.array([1, 2, 3, 4, 5]) #tablice
@@ -15,7 +17,7 @@ A = np.array([[1, 2, \
     [7, 8, 9]])
 print(A)
 
-v = np.arange(1,7)
+v= np.arange(1,7)
 print(v,"\n")
 
 v = np.arange(-2,7)
@@ -120,3 +122,97 @@ b =  A@x
 y = np.linalg.solve(A,b)
 print(y)
 
+
+#potegowaanie
+PM = np.linalg.matrix_power(A,2) # por. A@A
+PT = A**2  # por. A*A
+
+A.T # transpozycja
+A.transpose()
+A.conj().T # hermitowskie sprzezenie macierzy (dla m. zespolonych)
+A.conj().transpose()
+
+
+
+
+
+print(A == B)
+A != B
+2 < A
+A > B
+print(A < B)
+A >= B
+A <= B
+
+
+
+np.logical_not(A)
+np.logical_and(A, B)
+np.logical_or(A, B)
+np.logical_xor(A, B)
+print( np.all(A) )
+print( np.any(A) )
+print( v > 4 )
+print( np.logical_or(v>4, v<2))
+print( np.nonzero(v>4) )
+print( v[np.nonzero(v>4) ] )
+
+#INNE
+print(np.max(A))
+print(np.min(A))
+print(np.max(A,0))
+print(np.max(A,1))
+print( A.flatten() )
+print( A.flatten("F") )
+'''
+#----------------------------------------------------Rozdział 5 -------------------------------------------------
+
+
+# import matplotlib.pyplot as plt
+#
+# x = [1,2,3]
+# y = [4,6,5]
+# plt.plot(x,y) #plot jak w matlabie
+# plt.show()
+
+# import numpy as np
+# import matplotlib.pyplot as plt
+# x = np.arange(0.0, 2.0, 0.01)
+# y = np.sin(2.0*np.pi*x) #tworzenie sinusoidy
+# #plt.plot(x,y)
+# plt.plot(x,y,'r:',linewidth=6) #grubosc,kolor
+# plt.xlabel('Czas') #opisy osi
+# plt.ylabel('Pozycja')
+# plt.title('Nasz pierwszy wykres')
+# plt.grid(True) #siatka
+# plt.show()
+
+# import numpy as np
+# import matplotlib.pyplot as plt
+#
+# x = np.arange(0.0, 2.0, 0.01)
+# y1 = np.sin(2.0*np.pi*x)
+# y2 = np.cos(2.0*np.pi*x)
+# plt.plot(x,y1,'r:',x,y2,'g')
+# plt.legend(('dane y1','dane y2'))
+# plt.xlabel('Czas') #opisy osi
+# plt.ylabel('Pozycja')
+# plt.title('Wykres ')
+# plt.grid(True)
+# plt.show()
+
+# import numpy as np
+# import matplotlib.pyplot as plt
+#
+# x = np.arange(0.0, 2.0, 0.01)
+# y1 = np.sin(2.0*np.pi*x)
+# y2 = np.cos(2.0*np.pi*x)
+# y = y1*y2
+# l1, = plt.plot(x,y,'b')
+# l2,l3 = plt.plot(x,y1,'r:',x,y2,'g')
+# plt.legend((l2,l3,l1),('dane y1','dane y2','y1*y2'))
+# plt.xlabel('Czas') #opisy osi
+# plt.ylabel('Pozycja')
+# plt.title('Wykres ')
+# plt.grid(True)
+# plt.show()
